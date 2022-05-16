@@ -28,11 +28,11 @@ Folder `Worksheet-2` berisikan program-program yang dibutuhkan untuk menjalankan
 6. Secara default, program akan menggunakan **port 3000**. Namun jika halaman tidak dapat ditemukan, periksa pada `command prompt` atau `terminal` untuk mendapatkan port yang digunakan. <br/>
 ![Terminal](./Documentations/localhost-port.png "Terminal") <br/><br/>
 
-## Model 1 (Green Man A.K.A Creeper)
+## Model 1 (Green Man A.K.A Creeper by Nofaldi Fikrul Atamam)
 
 Model manusia dengan 9 sambungan yaitu pada (Kepala-Badan, Badan-Bahu Kanan, Badan-Bahu Kiri, Bahu Kanan-Tangan Kanan, Bahu Kiri-Tangan Kiri, Badan-Betis Kanan, Badan-Betis Kiri, Betis Kiri-Kaki Kiri, Betis Kanan-Kaki Kanan)
 
-## Model 2 (Manusia Lego)
+## Model 2 (Manusia Lego by Dionisius Baskoro Samudra)
 Model dengan 10 bagian:
 1. Kepala
 2. Badan
