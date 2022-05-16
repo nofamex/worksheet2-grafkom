@@ -19,6 +19,7 @@ export default function App() {
   const [play, setPlay] = useState(false);
   const [light, setLight] = useState(true);
 
+  // Reference: https://ricard.dev/how-to-get-random-hex-color-with-javascript/
   const random_color = () => {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
@@ -151,7 +152,7 @@ export default function App() {
       </div>
       <footer class="footer">
         Build with ❤️ by SKUP GAMING <br />
-        Nofaldi Fikrul Atmam & Dionisius Baskoro Samudra
+        {`Nofaldi Fikrul Atmam & Dionisius Baskoro Samudra`}
         <div style={{ marginTop: "2rem" }}>
           <a
             href="https://www.flaticon.com/"
