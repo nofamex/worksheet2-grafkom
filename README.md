@@ -1,7 +1,7 @@
 # Worksheet 2
 
 - Nofaldi Fikrul Atmam 1906398420
-- Dionisius Baskoro Samudra
+- Dionisius Baskoro Samudra 1906350774
 
 ## About
 Program ini merupakan program **Hierarchical Modelling & Lighting**. Folder ini terdiri atas beberapa bagian:
