@@ -10,7 +10,7 @@ import Stone2 from "./objects/Stone2";
 import { OrbitControls } from "@react-three/drei";
 import GroundPlane from "./components/GroundPlane";
 import BackDrop from "./components/Backdrop";
-import KeyLight from "./components/KeyLight";
+import { KeyLight, FillLight, RimLight } from "./components/KeyLight";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./styles.css";
@@ -19,6 +19,7 @@ import "./styles.css";
 export default function App() {
   const [play, setPlay] = useState(true);
   const [light, setLight] = useState(true);
+  const [wireframe, setWireframe] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
 
   // Reference: https://ricard.dev/how-to-get-random-hex-color-with-javascript/
@@ -57,6 +58,23 @@ export default function App() {
     };
   }, [light]);
 
+  useEffect(() => {
+    const setView = (event) => {
+      if (event.key === "v" || event.key === "V") {
+        if (wireframe) {
+          window.location.reload(false);
+        } else {
+          setWireframe(!wireframe);
+        }
+      }
+    };
+
+    window.addEventListener("keypress", setView);
+    return () => {
+      window.removeEventListener("keypress", setView);
+    };
+  }, [wireframe]);
+
   return (
     <div
       style={{
@@ -71,15 +89,22 @@ export default function App() {
         <GroundPlane />
         <BackDrop />
         <OrbitControls />
-        <KeyLight brightness={50} color={light} />
+        <KeyLight brightness={30} color={light} /> {/* Direction Light */}
+        <FillLight brightness={50} color={light} /> {/* Point Light */}
+        <RimLight brightness={100} color={light} selected={selectedObject} />
+        {/* Spot Light */}
         <Suspense fallback={null}>
-          <Chicken play={play} selected={selectedObject} />
-          <Tree1 />
-          <Tree2 />
-          <Ender play={play} selected={selectedObject} />
-          <Person play={play} selected={selectedObject} />
-          <Stone1 />
-          <Stone2 />
+          <Chicken
+            play={play}
+            selected={selectedObject}
+            wireframe={wireframe}
+          />
+          <Tree1 wireframe={wireframe} />
+          <Tree2 wireframe={wireframe} />
+          <Ender play={play} selected={selectedObject} wireframe={wireframe} />
+          <Person play={play} selected={selectedObject} wireframe={wireframe} />
+          <Stone1 wireframe={wireframe} />
+          <Stone2 wireframe={wireframe} />
         </Suspense>
       </Canvas>
       <Footer setSelector={setSelectedObject} />

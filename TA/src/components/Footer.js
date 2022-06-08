@@ -10,6 +10,7 @@ export default function Footer({ ...props }) {
     { value: "chicken", label: "Chicken" },
     { value: "enderman", label: "Enderman" },
     { value: "human", label: "Human" },
+    { value: "spotlight", label: "Spotlight" },
   ];
 
   const handleSelectorChange = (value) => {

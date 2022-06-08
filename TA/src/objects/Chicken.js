@@ -130,7 +130,15 @@ export default function Model({ ...props }) {
                 material={materials.Material}
                 position={[0.02, 0.53, 0.56]}
                 scale={0.63}
-              />
+              >
+                {props.wireframe && (
+                  <meshBasicMaterial
+                    attach="material"
+                    color="hotpink"
+                    wireframe
+                  />
+                )}
+              </mesh>
             </group>
             <group
               name="Bone006"
@@ -144,7 +152,15 @@ export default function Model({ ...props }) {
                 position={[-0.02, -0.2, 0.12]}
                 rotation={[Math.PI, -1.57, 0]}
                 scale={[0.27, 0.5, 0.26]}
-              />
+              >
+                {props.wireframe && (
+                  <meshBasicMaterial
+                    attach="material"
+                    color="hotpink"
+                    wireframe
+                  />
+                )}
+              </mesh>
             </group>
             <group
               name="Bone008"
@@ -158,7 +174,15 @@ export default function Model({ ...props }) {
                 position={[-0.02, -0.23, -0.11]}
                 rotation={[Math.PI, -1.57, 0]}
                 scale={[0.27, 0.5, 0.26]}
-              />
+              >
+                {props.wireframe && (
+                  <meshBasicMaterial
+                    attach="material"
+                    color="hotpink"
+                    wireframe
+                  />
+                )}
+              </mesh>
             </group>
             <group
               name="Bone_shoulde_left"
@@ -177,7 +201,15 @@ export default function Model({ ...props }) {
                   position={[0.01, -0.13, -0.16]}
                   rotation={[0.92, -1.57, -1.72]}
                   scale={[0.43, 0.5, 2.04]}
-                />
+                >
+                  {props.wireframe && (
+                    <meshBasicMaterial
+                      attach="material"
+                      color="hotpink"
+                      wireframe
+                    />
+                  )}
+                </mesh>
               </group>
             </group>
             <group
@@ -197,7 +229,15 @@ export default function Model({ ...props }) {
                   position={[-0.04, -0.16, 0.27]}
                   rotation={[-2.55, -Math.PI / 2, 0]}
                   scale={[0.51, 0.5, 2.04]}
-                />
+                >
+                  {props.wireframe && (
+                    <meshBasicMaterial
+                      attach="material"
+                      color="hotpink"
+                      wireframe
+                    />
+                  )}
+                </mesh>
               </group>
             </group>
             <mesh
@@ -206,7 +246,15 @@ export default function Model({ ...props }) {
               material={materials.Material}
               position={[-0.01, 0.79, 0.02]}
               scale={[1, 0.64, 2.91]}
-            />
+            >
+              {props.wireframe && (
+                <meshBasicMaterial
+                  attach="material"
+                  color="hotpink"
+                  wireframe
+                />
+              )}
+            </mesh>
           </group>
         </group>
       </group>

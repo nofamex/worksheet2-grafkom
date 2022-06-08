@@ -15,7 +15,11 @@ export default function Model({ ...props }) {
         material={materials["Material.001"]}
         position={[-5, 1, 0]}
         rotation={[-Math.PI, 4, -Math.PI]}
-      />
+      >
+        {props.wireframe && (
+          <meshBasicMaterial attach="material" color="hotpink" wireframe />
+        )}
+      </mesh>
     </group>
   );
 }

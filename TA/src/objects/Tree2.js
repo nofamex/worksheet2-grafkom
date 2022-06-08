@@ -15,7 +15,11 @@ export default function Model({ ...props }) {
         material={materials.Material}
         position={[-1, 2.3, -4]}
         scale={[0.3, 2.2, 0.14]}
-      />
+      >
+        {props.wireframe && (
+          <meshBasicMaterial attach="material" color="hotpink" wireframe />
+        )}
+      </mesh>
     </group>
   );
 }
