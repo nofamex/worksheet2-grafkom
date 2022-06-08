@@ -17,54 +17,93 @@ Folder `Documentations` berisikan dokumentasi atau gambar dari projek ini. <br /
 Folder `TA` berisikan program-program yang dibutuhkan untuk menjalankan projek ini.
 
 ## How To Operate
-
+0. Program dapat langsung di akses melalui link berikut: http://skupgaming.nofamex.tech/
 1. Buka aplikasi `command prompt` atau `terminal` <br/>
    ![Terminal](./Documentations/terminal.png "Terminal") <br/><br/>
-2. Buka folder/directory `Worksheet-2` melalui `command prompt` atau `terminal` <br/>
-   ![Terminal](./Documentations/Worksheet-2-dir.png "Terminal") <br/><br/>
+2. Buka folder/directory `TA` melalui `command prompt` atau `terminal` <br/>
+   ![Terminal](./Documentations/TA-dir.png "Terminal") <br/><br/>
 3. Jalankan perintah `npm install` <br/>
    ![Terminal](./Documentations/npm-install.png "Terminal") <br/><br/>
 4. Jalankan perintah `npm run start` <br/>
-   ![Terminal](./Documentations/npm-run-start.png "Terminal") <br/><br/>
+   ![Terminal](./Documentations/npm-start.png "Terminal") <br/><br/>
 5. Buka browser dan buka halaman `http://localhost:3000` <br/>
    ![Terminal](./Documentations/browser.png "Terminal") <br/><br/>
 6. Secara default, program akan menggunakan **port 3000**. Namun jika halaman tidak dapat ditemukan, periksa pada `command prompt` atau `terminal` untuk mendapatkan port yang digunakan. <br/>
    ![Terminal](./Documentations/localhost-port.png "Terminal") <br/><br/>
-7. Program juga bisa langsung di akses di link berikut: http://skupgaming.nofamex.tech/
 
-## Model 1 (Green Man A.K.A Creeper by Nofaldi Fikrul Atamam)
+## Proses Pembentukan Model
+Model dibentuk menggunakan aplikasi 3D Blender dan kemudian diekspor sebagai file object dengan format `.glb`. Terdapat 5 model yang digunakan pada program ini: **Ender Man, Chicken, Person, Stone, Tree**. Model **Ender Man, Chicken, Person** merupakan **hierarchy model**, sedangkan model **Stone, Tree** merupakan objek model biasa.
 
-Model manusia dengan 9 sambungan yaitu pada (Kepala-Badan, Badan-Bahu Kanan, Badan-Bahu Kiri, Bahu Kanan-Tangan Kanan, Bahu Kiri-Tangan Kiri, Badan-Betis Kanan, Badan-Betis Kiri, Betis Kiri-Kaki Kiri, Betis Kanan-Kaki Kanan)
+### Ender Man
+Model dengan 6 bagian:
 
-## Model 2 (Manusia Lego by Dionisius Baskoro Samudra)
+1. Kepala
+2. Badan
+3. Tangan Kanan
+4. Tangan Kiri
+5. Kaki Kanan
+6. Kaki Kiri
 
+Enam bagian tersebut dihubungkan dengan 5 sendi sebagai berikut:
+
+1. Kepala-Badan
+2. Badan-Tangan Kanan
+3. Badan-Tangan Kiri
+4. Badan-Kaki Kanan
+5. Badan-Kaki Kiri
+
+Berikut merupakan detil dari model Ender Man
+![Ender Man](./Documentations/ender.png "Ender Man")
+
+### Chicken
+Model dengan 6 bagian:
+
+1. Kepala
+2. Badan
+3. Sayap Kanan
+4. Sayap Kiri
+5. Kaki Kanan
+6. Kaki Kiri
+
+Enam bagian tersebut dihubungkan dengan 5 sendi sebagai berikut:
+
+1. Kepala-Badan
+2. Badan-Sayap Kanan
+3. Badan-Sayap Kiri
+4. Badan-Kaki Kanan
+5. Badan-Kaki Kiri
+
+Berikut merupakan detil dari model Chicken
+![Chicken](./Documentations/chicken.png "Chicken")
+
+### Person
 Model dengan 10 bagian:
 
 1. Kepala
 2. Badan
 3. Lengan Kanan
-4. Tangan Kanan Bawah
+4. Tangan Kanan
 5. Lengan Kiri
-6. Tangan Kiri Bawah
-7. Paha Kiri
-8. Kaki Kiri
-9. Paha Kanan
-10. Kaki Kanan
+6. Tangan Kiri
+7. Paha Kanan
+8. Kaki Kanan
+9. Paha Kiri
+10. Kaki Kiri
 
 Sepuluh bagian tersebut dihubungkan dengan 9 sendi sebagai berikut:
 
 1. Kepala-Badan
 2. Badan-Lengan Kanan
-3. Badan-Lengan Kiri
-4. Lengan Kanan-Tangan Kanan Bawah
-5. Lengan Kiri-Tangan Kiri Bawah
-6. Badan-Paha Kiri
-7. Badan-Paha Kanan
-8. Paha Kanan-Kaki Kanan
+3. Lengan Kanan-Tangan Kanan
+4. Badan-Lengan Kiri
+5. Lengan Kiri-Tangan Kiri
+6. Badan-Paha Kanan
+7. Paha Kanan-Kaki Kanan
+8. Badan-Paha Kiri
 9. Paha Kiri-Kaki Kiri
 
-Berikut merupakan detil dari model Lego
-![Lego Model](./Documentations/lego-docs.jpeg "Lego Model")
+Berikut merupakan detil dari model Person
+![Person](./Documentations/person.png "Person")
 
 ## Proses Rendering Objek dan Scene
 
