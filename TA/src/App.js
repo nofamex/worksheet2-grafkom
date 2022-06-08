@@ -1,9 +1,12 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Chicken from "./objects/Chicken";
-import Tree from "./objects/Tree";
+import Tree1 from "./objects/Tree1";
+import Tree2 from "./objects/Tree2";
 import Ender from "./objects/Ender";
 import Person from "./objects/Person";
+import Stone1 from "./objects/Stone1";
+import Stone2 from "./objects/Stone2";
 import { OrbitControls } from "@react-three/drei";
 import GroundPlane from "./components/GroundPlane";
 import BackDrop from "./components/Backdrop";
@@ -16,6 +19,7 @@ import "./styles.css";
 export default function App() {
   const [play, setPlay] = useState(true);
   const [light, setLight] = useState(true);
+  const [selectedObject, setSelectedObject] = useState(null);
 
   // Reference: https://ricard.dev/how-to-get-random-hex-color-with-javascript/
   const random_color = () => {
@@ -69,13 +73,16 @@ export default function App() {
         <OrbitControls />
         <KeyLight brightness={50} color={light} />
         <Suspense fallback={null}>
-          <Chicken play={play} />
-          <Tree />
-          <Ender play={play} />
-          <Person play={play} />
+          <Chicken play={play} selected={selectedObject} />
+          <Tree1 />
+          <Tree2 />
+          <Ender play={play} selected={selectedObject} />
+          <Person play={play} selected={selectedObject} />
+          <Stone1 />
+          <Stone2 />
         </Suspense>
       </Canvas>
-      <Footer />
+      <Footer setSelector={setSelectedObject} />
     </div>
   );
 }
