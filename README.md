@@ -105,6 +105,14 @@ Sepuluh bagian tersebut dihubungkan dengan 9 sendi sebagai berikut:
 Berikut merupakan detil dari model Person
 ![Person](./Documentations/person.png "Person")
 
+### Stone
+Berikut merupakan detil dari model Stone
+![Stone](./Documentations/stone.png "Stone")
+
+### Tree
+Berikut merupakan detil dari model Tree
+![Tree](./Documentations/tree.png "Tree")
+
 ## Proses Rendering Objek dan Scene
 
 1. Membuat canvas sebagai media untuk merender model, plane dll
