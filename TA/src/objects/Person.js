@@ -7,25 +7,23 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Model({ ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/creeper3.glb");
+  const { nodes, materials, animations } = useGLTF("/person.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    if (!props.play) actions.ArmatureAction.stop();
-    else actions.ArmatureAction.play();
+    if (!props.play) actions["ArmatureAction.001"].stop();
+    else actions["ArmatureAction.001"].play();
   }, [props.play]);
-
-  console.log(actions);
 
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Armature" position={[0.04, 1.11, 0.16]} scale={0.44}>
+        <group name="Armature" position={[1.5, 1.9, -3]} scale={0.44}>
           <group name="Bone001" position={[0.03, -0.02, -0.02]}>
             <group
               name="Bone002"
               position={[0, 2.32, 0]}
-              rotation={[-0.56, 0.03, -2.19]}
+              rotation={[-0.21, 0.02, 0]}
             >
               <mesh
                 name="Cube"
@@ -36,13 +34,13 @@ export default function Model({ ...props }) {
             </group>
             <group
               name="Bone006"
-              position={[2.08, -2.2, 0.28]}
-              rotation={[Math.PI, -Math.PI / 2, 0]}
+              position={[0.44, -0.24, 0.01]}
+              rotation={[2.55, -1.57, 0]}
             >
               <group
                 name="Bone007"
                 position={[0, 0.98, 0]}
-                rotation={[-0.05, -0.07, 0.05]}
+                rotation={[-0.02, 0, -0.43]}
               >
                 <mesh
                   name="Cube009"
@@ -64,13 +62,13 @@ export default function Model({ ...props }) {
             </group>
             <group
               name="Bone008"
-              position={[-1.07, -2.48, 0.65]}
-              rotation={[Math.PI, -Math.PI / 2, 0]}
+              position={[-0.38, -0.24, 0.02]}
+              rotation={[-2.74, -Math.PI / 2, 0]}
             >
               <group
                 name="Bone009"
                 position={[0, 0.98, 0]}
-                rotation={[0.01, -0.03, -0.1]}
+                rotation={[0.01, 0, -0.44]}
               >
                 <mesh
                   name="Cube003"
@@ -96,13 +94,13 @@ export default function Model({ ...props }) {
             >
               <group
                 name="Bone010"
-                position={[-0.67, 3.91, -1.53]}
-                rotation={[-1.28, -0.09, -0.29]}
+                position={[0.01, 1.16, -0.01]}
+                rotation={[-1.22, -0.04, 0.48]}
               >
                 <group
                   name="Bone011"
                   position={[0, 0.83, 0]}
-                  rotation={[0.04, -0.02, 0.07]}
+                  rotation={[0.01, 0.05, 0.73]}
                 >
                   <mesh
                     name="Cube006"
@@ -129,10 +127,14 @@ export default function Model({ ...props }) {
             >
               <group
                 name="Bone003"
-                position={[-0.23, 4.58, -1.68]}
-                rotation={[1.84, -0.08, 2.87]}
+                position={[0, 1.27, -0.01]}
+                rotation={[2, -0.18, 2.54]}
               >
-                <group name="Bone004" position={[0, 0.79, 0]}>
+                <group
+                  name="Bone004"
+                  position={[0, 0.79, 0]}
+                  rotation={[-0.02, 0.02, 0.32]}
+                >
                   <mesh
                     name="Cube007"
                     geometry={nodes.Cube007.geometry}
@@ -164,4 +166,4 @@ export default function Model({ ...props }) {
   );
 }
 
-useGLTF.preload("/creeper3.glb");
+useGLTF.preload("/person.glb");
