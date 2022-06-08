@@ -17,24 +17,28 @@ Folder `Documentations` berisikan dokumentasi atau gambar dari projek ini. <br /
 Folder `TA` berisikan program-program yang dibutuhkan untuk menjalankan projek ini.
 
 ## How To Operate
+
 0. Program dapat langsung di akses melalui link berikut: http://skupgaming.nofamex.tech/
-1. Buka aplikasi `command prompt` atau `terminal` <br/>
+1. Link video presentasi https://drive.google.com/file/d/1iHb-3qIkAEV8gzWf_x5KEnuzZEiY4vPx/view?usp=sharing
+2. Buka aplikasi `command prompt` atau `terminal` <br/>
    ![Terminal](./Documentations/terminal.png "Terminal") <br/><br/>
-2. Buka folder/directory `TA` melalui `command prompt` atau `terminal` <br/>
+3. Buka folder/directory `TA` melalui `command prompt` atau `terminal` <br/>
    ![Terminal](./Documentations/TA-dir.png "Terminal") <br/><br/>
-3. Jalankan perintah `npm install` <br/>
+4. Jalankan perintah `npm install` <br/>
    ![Terminal](./Documentations/npm-install.png "Terminal") <br/><br/>
-4. Jalankan perintah `npm run start` <br/>
+5. Jalankan perintah `npm run start` <br/>
    ![Terminal](./Documentations/npm-start.png "Terminal") <br/><br/>
-5. Buka browser dan buka halaman `http://localhost:3000` <br/>
+6. Buka browser dan buka halaman `http://localhost:3000` <br/>
    ![Terminal](./Documentations/browser.png "Terminal") <br/><br/>
-6. Secara default, program akan menggunakan **port 3000**. Namun jika halaman tidak dapat ditemukan, periksa pada `command prompt` atau `terminal` untuk mendapatkan port yang digunakan. <br/>
+7. Secara default, program akan menggunakan **port 3000**. Namun jika halaman tidak dapat ditemukan, periksa pada `command prompt` atau `terminal` untuk mendapatkan port yang digunakan. <br/>
    ![Terminal](./Documentations/localhost-port.png "Terminal") <br/><br/>
 
 ## Proses Pembentukan Model
+
 Model dibentuk menggunakan aplikasi 3D Blender dan kemudian diekspor sebagai file object dengan format `.glb`. Terdapat 5 model yang digunakan pada program ini: **Ender Man, Chicken, Person, Stone, Tree**. Model **Ender Man, Chicken, Person** merupakan **hierarchy model**, sedangkan model **Stone, Tree** merupakan objek model biasa.
 
 ### Ender Man
+
 Model dengan 6 bagian:
 
 1. Kepala
@@ -56,6 +60,7 @@ Berikut merupakan detil dari model Ender Man
 ![Ender Man](./Documentations/ender.png "Ender Man")
 
 ### Chicken
+
 Model dengan 6 bagian:
 
 1. Kepala
@@ -77,6 +82,7 @@ Berikut merupakan detil dari model Chicken
 ![Chicken](./Documentations/chicken.png "Chicken")
 
 ### Person
+
 Model dengan 10 bagian:
 
 1. Kepala
@@ -106,10 +112,12 @@ Berikut merupakan detil dari model Person
 ![Person](./Documentations/person.png "Person")
 
 ### Stone
+
 Berikut merupakan detil dari model Stone
 ![Stone](./Documentations/stone.png "Stone")
 
 ### Tree
+
 Berikut merupakan detil dari model Tree
 ![Tree](./Documentations/tree.png "Tree")
 
