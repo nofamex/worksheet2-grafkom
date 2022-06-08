@@ -167,7 +167,7 @@ export default function Footer({ ...props }) {
             }}
           >
             <p className="control">
-              Object Control
+              Object Control {"(Use Lower Case)"}
             </p>
             <div style={{ display: "flex" }}>
               <div className="control">
